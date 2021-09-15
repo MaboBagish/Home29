@@ -1,8 +1,7 @@
 
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Iterator;
+import javax.sql.rowset.Predicate;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -34,6 +33,10 @@ final class Cat {
         return Stream.generate (Cat::new)
                 .limit (amount)
                 .collect (Collectors.toList ( ));
+    }
+
+    public static List<String> getNames() {
+        return names;
     }
 
     public final Color getColor() {
@@ -75,7 +78,6 @@ public static int byName(Cat e1, Cat e2){
 public static int byColor (Cat e1, Cat e2){
     return e1.getColor ().compareTo (e2.getColor ());
 }
-
 
 
 

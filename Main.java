@@ -1,3 +1,4 @@
+import javax.lang.model.element.Name;
 import javax.sql.rowset.Predicate;
 import javax.swing.*;
 import java.awt.*;
@@ -5,6 +6,8 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
+    private boolean aBoolean;
+
     public static void main(String[] args) {
 
         var cats = Cat.makeCats (10);
@@ -30,8 +33,9 @@ public class Main {
                 catIterator.remove ( );
             }
         }
-
             Printer.print (cats);
+
+
             // А сюда добавьте код, который будет сортировать коллекцию котов
             // используйте лямбда-выражения и ссылки на методы
             //cats.sort(?);
